@@ -1,0 +1,38 @@
+.section-speakers {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__list {
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+    }
+    &__item:not(:last-child) {
+        margin-right: 10px;
+      }
+    &__item {
+        height: 300px;
+        @include flex(flex-start, center, column);
+        width: 45%;
+        margin-bottom: 50px;
+        @media screen and (min-width: $screen-tablet) {
+            width: 30%;
+          }
+    }
+    &__image {
+        margin-bottom: 20px;
+    }
+    &__subtitle {
+        width: 100%;
+        text-align: center;
+        @include text($H200, 800, $black);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
+        margin-bottom: 10px;
+    }
+    &__text {
+        width: 100%;
+        text-align: center;
+        @include text($H50, 400, $cool-gray);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
+    }
+}

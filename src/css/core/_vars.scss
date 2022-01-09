@@ -1,0 +1,48 @@
+// Colors
+$white: #ffffff;
+$black: hsl(0, 0%, 9%);
+$electric-blue: #00AEE9;
+$mint-green: #69FABD;
+$midnight-blue: #1B295E;
+$bg-input: #F9F9F9;
+$cool-gray:#758796;
+$cool-gray-light:#F7F7F7;
+$cool-line:#EBEEF8;
+$bg-burger-menu:linear-gradient(45deg, #758796, #758796, #758796, #758796, #758796);
+$linear-gradient:linear-gradient(to right, #00aee9, #00c4ed, #00d8e6, #00ead4, #69fabd);
+
+
+// Fonts
+$main-font: 'Nunito', sans-serif;
+$text-font: 'Fira Sans', sans-serif;
+
+
+@function calcRem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+$H900: calcRem(60px);
+$H800: calcRem(50px);
+$H700: calcRem(38px);
+$H600: calcRem(30px);
+$H500: calcRem(24px);
+$H400: calcRem(22px);
+$H300: calcRem(20px);
+$H200: calcRem(18px);
+$H100: calcRem(16px);
+$H50: calcRem(14px);
+$H10: calcRem(13px);
+$H5: calcRem(10px);
+
+$screen-iphone: 376px;
+$screen-iphone-plus: 451px;
+$screen-tablet-small: 570px;
+$screen-tablet-large: 700px;
+$screen-tablet: 769px;
+$screen-desktop: 1024px;
+$screen-desktop-average: 1200px;
+$screen-desktop-large: 1300px;
+$screen-hd: 1400px;
+$screen-fullhd: 1500px;
+$screen-retina: 1660px;

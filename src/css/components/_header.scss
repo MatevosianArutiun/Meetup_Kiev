@@ -1,0 +1,55 @@
+.header {
+    padding-top: 60px;
+    height: 100vh;
+    background-image: url(../images/header_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__container {
+        height: 100%;
+        @include flex(center, center, column);
+        @media screen and (min-width: $screen-tablet) {
+            @include flex(center, flex-start, column);
+          }
+    }
+    &__title {
+        @include text($H500, 700, $cool-line);
+        letter-spacing: 2px;
+        margin-bottom: 30px;
+        @media screen and (min-width: $screen-tablet) {
+            @include text($H800, 700, $cool-line);
+            margin-bottom: 20px;
+          }
+        &::after {
+            display: none;
+          }
+    }
+    &__subtitle {
+        text-align: center;
+        font-family: $main-font;
+        letter-spacing: 2px;
+        margin-bottom: 50pX;
+        @include text($H100, 600, $cool-line);
+        @media screen and (min-width: $screen-iphone-plus) {
+            @include text($H200, 600, $cool-line);
+          }
+        @media screen and (min-width: $screen-tablet) {
+            @include text($H400, 600, $cool-line);
+          }
+      }
+      &__text {
+        text-align: center;
+        width: 100%;
+        @include text($H50, 400, $cool-line);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
+        @media screen and (min-width: $screen-iphone-plus) {
+            @include text($H100, 400, $cool-line);
+          }
+        @media screen and (min-width: $screen-tablet) {
+            @include text($H100, 400, $cool-line);
+            width: 70%;
+            text-align: left;
+          }
+        
+      }
+}

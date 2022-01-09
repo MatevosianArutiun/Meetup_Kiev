@@ -1,0 +1,39 @@
+.section-program {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    &__container {
+        height: 100%;
+        @include flex(center, center, column);
+    }
+    &__title {
+        margin-bottom: 100px;
+    }
+    &__inner {
+        width: 90%;
+        height: 100%;
+        background-color: $cool-gray-light;
+        padding: 40px;
+    }
+    &__list {
+        @include flex(center, flex-start, column);
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 50px;
+      }
+      &__span {
+        text-align: center;
+        width: 100%;
+        @include text($H50, 400, $cool-gray);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
+        @media screen and (min-width: $screen-iphone-plus) {
+            @include text($H100, 400, $cool-gray);
+          }
+        @media screen and (min-width: $screen-tablet) {
+            @include text($H100, 400, $cool-gray);
+            width: 70%;
+            text-align: left;
+          }
+        
+      }
+}

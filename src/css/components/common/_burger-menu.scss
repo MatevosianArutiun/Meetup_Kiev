@@ -1,0 +1,16 @@
+.burger-menu {
+    &__inner {
+        background-image: $bg-burger-menu;
+       
+    }
+    &__menu {
+        height: 100%;
+        @include flex(center, flex-start, column);
+    }
+    &__item {
+        margin-bottom: 50px;
+    }
+    &__icon {
+        fill: $white;
+    }
+}

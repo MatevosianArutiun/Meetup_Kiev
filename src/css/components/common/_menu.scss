@@ -1,0 +1,38 @@
+.menu {
+      display: none;
+      @media screen and (min-width: $screen-desktop-large) {
+       display: block;
+      }
+    &__list {
+      display: none;
+      @media screen and (min-width: $screen-desktop-average) {
+        @include flex(space-between, center, row);
+      }
+        
+        
+    }
+    &__item:not(:last-child) {
+        margin-right: 30px;
+      }
+      &__link {
+          font-family: $main-font;
+          // text-transform: uppercase;
+          @include text($H100, 400, $midnight-blue);
+          transition: all 0.2s linear;
+          &:hover {
+            @include text($H100, 400, $electric-blue);
+          }
+      }
+      &__link::after {
+        display: block;
+        content: "";
+        height: 1px;
+        width: 0%;
+        background-color: $electric-blue;
+        transition: width 0.2s ease-in-out;
+      }
+      &__link:hover:before,
+      &__link:hover::after {
+        width: 100%;
+      }
+}
