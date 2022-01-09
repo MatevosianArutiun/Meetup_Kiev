@@ -1,0 +1,28 @@
+.section-sponsors {
+    padding-bottom: 50px;
+    padding-top: 50px;
+    background-color: $midnight-blue;
+    &__container {
+        @include flex(center, center, column);
+        height: 100%;
+    }
+    &__list {
+        width: 100%;
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+    }
+    &__item:not(:last-child) {
+        // margin-right: 100px;
+      }
+      &__item {
+          @include flex(center, center, row);
+          margin-bottom: 50px;
+          width: 100%;
+          @media screen and (min-width: $screen-tablet-small) {
+            width: 300px;
+          }
+      }
+    &__image {
+        height: 50px;
+    }
+}

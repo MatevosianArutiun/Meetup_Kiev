@@ -1,0 +1,49 @@
+.section-contacts {
+    padding-top: 50px;
+    &__inner {
+        @include flex(center, center, column);
+        margin-bottom: 100px;
+        @media screen and (min-width: $screen-tablet) {
+            @include flex(center, center, row);
+          }
+    }
+    &__aside-left {
+        width: 300px;
+        @include flex(center, flex-start, column);
+        margin-right: 0px;
+        margin-bottom: 50px;
+        @media screen and (min-width: $screen-tablet) {
+            margin-right: 200px;
+            margin-bottom: 0px;
+          }
+    }
+    &__span:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    &__span {
+        @include text($H100, 400, $cool-gray);
+        font-family: $main-font;
+      }
+      &__link {
+        @include text($H100, 600, $electric-blue);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
+        &:hover {
+            @include text($H100, 600, $black);
+        }
+      }
+    &__aside-right {
+        width: 300px;
+        @include flex(center, flex-start, column);
+    }
+    &__map {
+        height: 50vh;
+        width: 100%;
+        @include flex(center, center, column);
+        margin-bottom: 100px;
+    }
+    &__iframe {
+        width: 80%;
+        height: 100%;
+    }
+}
