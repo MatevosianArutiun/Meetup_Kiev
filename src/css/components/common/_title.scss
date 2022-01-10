@@ -22,9 +22,6 @@
       background-image: $linear-gradient;
     }
     &--white {
-        @include text($H300, 700, $white);
-        @media screen and (min-width: $screen-tablet) {
-          @include text($H700, 700, $white);
-        }
+        color: $white;
     }
 }
