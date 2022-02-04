@@ -1,22 +1,41 @@
 .section-speakers {
+    padding-bottom: 50px;
     padding-top: 50px;
     &__list {
         @include flex(center, center, row);
         flex-wrap: wrap;
     }
     &__item:not(:last-child) {
-        margin-right: 10px;
+        margin-right: 0px;
+        @media screen and (min-width: $screen-tablet) {
+            margin-right: 30px;
+        }
       }
     &__item {
-        height: 300px;
+        background-color: $cool-line;
+        cursor: pointer;
+        border: 1px solid $cool-line;
+        border-radius: 25px;
+        padding: 15px;
+        height: auto;
+        transition: all 0.3s linear;
         @include flex(flex-start, center, column);
-        width: 45%;
+        width: 90%;
         margin-bottom: 50px;
         @media screen and (min-width: $screen-tablet) {
-            width: 30%;
+            width: 45%;
+            min-height: 520px;
           }
+          @media screen and (min-width: $screen-desktop-average) {
+            width: 30%;
+            &:hover {
+                background-color: $white;
+              }
+        }
+          
     }
     &__image {
+        width: 165px;
         margin-bottom: 20px;
     }
     &__subtitle {
@@ -27,10 +46,15 @@
         letter-spacing: 1.6px;
         margin-bottom: 10px;
     }
+    &__text:first-of-type {
+        margin-bottom: 20px;
+        @include text($H10, 400, $black);
+    }
+    
     &__text {
         width: 100%;
         text-align: center;
-        @include text($H50, 400, $cool-gray);
+        @include text($H10, 400, $cool-gray);
         font-family: $main-font;
         letter-spacing: 1.6px;
     }

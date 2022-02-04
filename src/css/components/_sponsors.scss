@@ -1,29 +1,29 @@
 .section-sponsors {
-    padding-bottom: 50px;
-    padding-top: 50px;
+    padding-bottom: 70px;
+    padding-top: 30px;
     background-color: $midnight-blue;
     &__container {
         @include flex(center, center, column);
         height: 100%;
     }
-    &__list {
-        width: 100%;
-        @include flex(center, center, row);
-        flex-wrap: wrap;
-    }
-    &__item:not(:last-child) {
-        // margin-right: 100px;
-      }
-      &__item {
-          cursor: pointer;
-          @include flex(center, center, row);
-          margin-bottom: 50px;
-          width: 100%;
-          @media screen and (min-width: $screen-tablet-small) {
-            width: 300px;
+    &__title {
+        @include text($H400, 600, $cool-line);
+        @media screen and (min-width: $screen-tablet) {
+            @include text($H700, 600, $cool-line);
           }
-      }
+    }
     &__image {
         height: 50px;
+        margin-bottom: 50px;
+    }
+    &__text:last-of-type {
+        margin-bottom: 50px;
+      }
+    &__text {
+        margin-bottom: 20px;
+        text-align: center;
+        @include text($H100, 400, $cool-line);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
     }
 }
