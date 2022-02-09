@@ -7,6 +7,7 @@
         height: 100%;
     }
     &__title {
+        margin-bottom: 30px;
         @include text($H400, 600, $cool-line);
         @media screen and (min-width: $screen-tablet) {
             @include text($H700, 600, $cool-line);
@@ -20,9 +21,9 @@
         margin-bottom: 50px;
       }
     &__text {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
         text-align: center;
-        @include text($H100, 400, $cool-line);
+        @include text($H300, 400, $cool-line);
         font-family: $main-font;
         letter-spacing: 1.6px;
     }

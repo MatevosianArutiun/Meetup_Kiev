@@ -1,6 +1,6 @@
 .header {
     padding-top: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
     // height: 100vh;
     min-height: 100vh ;
     background-image: url(../images/header_bg.jpg);
@@ -28,7 +28,6 @@
         @media screen and (min-width: $screen-tablet) {
             text-align: left;
             @include text($H700, 700, $cool-line);
-            margin-bottom: 50px;
           }
         &::after {
             display: none;
@@ -47,23 +46,27 @@
             @include text($H400, 600, $cool-line);
           }
       }
+      &__text:last-of-type {
+       margin-bottom: 50px;
+        }
       &__text {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         text-align: center;
         width: 100%;
-        @include text($H10, 400, $cool-line);
+        @include text($H100, 400, $cool-line);
         font-family: $main-font;
         letter-spacing: 1.6px;
         @media screen and (min-width: $screen-iphone-plus) {
-          margin-bottom: 100px;
-            @include text($H100, 400, $cool-line);
+          // margin-bottom: 100px;
+            @include text($H200, 400, $cool-line);
           }
         @media screen and (min-width: $screen-tablet) {
-            @include text($H100, 400, $cool-line);
-            width: 70%;
+            @include text($H300, 400, $cool-line);
             text-align: left;
           }
-        
+        &--strong {
+          font-weight: 800;
+        }
       }
       &__button {
         margin: 0;

@@ -4,6 +4,9 @@
     &__list {
         @include flex(center, center, row);
         flex-wrap: wrap;
+        @media screen and (min-width: $screen-tablet) {
+            margin-left: 30px;
+        }
     }
     &__item:not(:last-child) {
         margin-right: 0px;
@@ -24,10 +27,10 @@
         margin-bottom: 50px;
         @media screen and (min-width: $screen-tablet) {
             width: 45%;
-            min-height: 520px;
+            min-height: 600px;
           }
           @media screen and (min-width: $screen-desktop-average) {
-            width: 30%;
+            width: 21%;
             &:hover {
                 background-color: $white;
               }

@@ -1,39 +1,66 @@
 .section-program {
-    padding-top: 50px;
     padding-bottom: 50px;
     &__container {
         height: 100%;
         @include flex(center, center, column);
     }
     &__title {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
     &__inner {
+        border-radius: 20px;
+        @include flex(center, center, column);
         width: 100%;
-        height: 100%;
+        min-height: 40vh;
         background-color: $cool-gray-light;
-        padding: 40px;
+        padding: 20px;
+        @media screen and (min-width: $screen-tablet) {
+            width: 70%;
+          }
+    }
+    &__subtitle {
+        text-align: center;
+        @include text($H500, 400, $black);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
     }
     &__list {
         @include flex(center, flex-start, column);
+        width: 100%;
     }
     &__item:not(:last-child) {
-        margin-bottom: 50px;
+        margin-bottom: 20px;
+      }
+      &__item {
+          box-shadow: 0 14px 28px rgba(0, 0, 0, 0.02), 0 10px 10px rgba(0, 0, 0, 0.02);
+          width: 100%;
+          border-radius: 20px;
+          padding-top: 20px;
+          @include flex(center, center, column);
+          border-bottom: 1px solid $cool-line;
+          border-top: 1px solid $cool-line;
+          transition: all 0.2s linear;
+          &:hover {
+            @media screen and (min-width: $screen-desktop) {
+                cursor: pointer;
+                background-color: $cool-line;
+              }
+          }
       }
       &__span {
+        margin-bottom: 20px;
         text-align: center;
-        width: 100%;
-        @include text($H50, 400, $cool-gray);
+        @include text($H100, 700, $cool-gray);
         font-family: $main-font;
         letter-spacing: 1.6px;
-        @media screen and (min-width: $screen-iphone-plus) {
-            @include text($H100, 400, $cool-gray);
-          }
-        @media screen and (min-width: $screen-tablet) {
-            @include text($H100, 400, $cool-gray);
-            width: 70%;
-            text-align: left;
-          }
         
+        
+      }
+      &__text {
+        text-align: center;
+        margin-bottom: 20px;
+        @include text($H300, 400, $black);
+        font-family: $main-font;
+        letter-spacing: 1.6px;
       }
 }
